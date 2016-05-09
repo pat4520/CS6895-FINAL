@@ -34,7 +34,8 @@ app.config(['$routeProvider', function ($routeProvider) {
     .when("/", {templateUrl: "partials/home.html", controller: "PageCtrl"})
     // Pages
     .when("/portfolio/:portfolioId", {templateUrl: "partials/grid.html", controller: "MainCtrl"})
-    .when("/visualizations", {templateUrl: "partials/graph.html", controller: "VisualizationsCtrl"})
+    .when("/visualizations/products", {templateUrl: "partials/graph.html", controller: "ProductsCtrl"})
+    .when("/visualizations/assets", {templateUrl: "partials/graph.html", controller: "AssetsCtrl"})
     // else 404
     .otherwise({redirectTo : "/"});
 }]);

@@ -41,8 +41,7 @@ angular.module("app")
             row.isNew = true;
         });
     };
-}])
-.controller('PageCtrl', function (/* $scope, $location, $http */) {
+}]).controller('PageCtrl', function (/* $scope, $location, $http */) {
   console.log("Page Controller reporting for duty.");
 
   // Activates the Carousel
@@ -54,29 +53,52 @@ angular.module("app")
   $('.tooltip-social').tooltip({
     selector: "a[data-toggle=tooltip]"
   })
-})
-.controller('VisualizationsCtrl', function($scope) {
+}).controller('ProductsCtrl', function($scope) {
   Highcharts.chart('container', {
     chart: {
         type: 'bar'
     },
     title: {
-        text: 'Fruit Consumption'
+        text: 'Product by Account'
     },
     xAxis: {
-        categories: ['Apples', 'Bananas', 'Oranges']
+        categories: ['XYZ Personal Account', 'Science Center', 'A1 Pension Fund']
     },
     yAxis: {
         title: {
-            text: 'Fruit eaten'
+            text: 'Product Holdings'
         }
     },
     series: [{
-        name: 'Jane',
-        data: [1, 0, 4]
+        name: 'Microsoft',
+        data: [50, 100, 100]
     }, {
-        name: 'John',
-        data: [5, 7, 3]
+        name: 'Berkshire Hathaway',
+        data: [0, 170, 100]
+    }]
+  })
+}).controller('AssetsCtrl', function($scope) {
+  Highcharts.chart('container', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'Product by Account'
+    },
+    xAxis: {
+        categories: ['XYZ Personal Account', 'Science Center', 'A1 Pension Fund']
+    },
+    yAxis: {
+        title: {
+            text: 'Product Holdings'
+        }
+    },
+    series: [{
+        name: 'Microsoft',
+        data: [50, 100, 100]
+    }, {
+        name: 'Berkshire Hathaway',
+        data: [0, 170, 100]
     }]
   })
 });
