@@ -2,6 +2,13 @@ group 'edu.columbia.pm.dashboard'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'idea'
+
+idea {
+    project {
+        languageLevel = '1.8'
+    }
+}
 
 repositories {
     mavenCentral()
