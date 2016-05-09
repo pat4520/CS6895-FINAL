@@ -1,0 +1,37 @@
+group 'edu.columbia.pm.dashboard'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+ext.vertxVersion='3.1.0'
+ext.kafkaVersion='0.9.0.0'
+ext.twitter4jVersion='3.0.6'
+ext.sparkVersion='1.5.2'
+ext.jacksonVersion='2.6.5'
+ext.json4sVersion='3.3.0'
+ext.scalaBinaryVersion='2.11'
+ext.alchemyJavaapiVersion='3.0.0-RC1'
+ext.stanfordCorenlpCersion='3.5.1'
+ext.ejmlVersion='0.23'
+ext.junitVersion='4.11'
+
+dependencies {
+    compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+    compile "com.fasterxml.jackson.module:jackson-module-scala_$scalaBinaryVersion:$jacksonVersion"
+    compile "io.vertx:vertx-core:$vertxVersion"
+    compile "org.apache.kafka:kafka_$scalaBinaryVersion:$kafkaVersion"
+    compile "org.apache.spark:spark-streaming_$scalaBinaryVersion:$sparkVersion"
+    compile "org.apache.spark:spark-streaming-twitter_$scalaBinaryVersion:$sparkVersion"
+    compile "org.apache.spark:spark-streaming-kafka_$scalaBinaryVersion:$sparkVersion"
+    compile "org.json4s:json4s-native_$scalaBinaryVersion:$json4sVersion"
+    compile "org.json4s:json4s-jackson_$scalaBinaryVersion:$json4sVersion"
+    compile "org.twitter4j:twitter4j-core:$twitter4jVersion"
+    compile "org.twitter4j:twitter4j-stream:$twitter4jVersion"
+    compile "com.ibm.watson.developer_cloud:java-sdk:$alchemyJavaapiVersion"
+    compile "com.googlecode.efficient-java-matrix-library:ejml:$ejmlVersion"
+    compile "junit:junit:$junitVersion"
+}
