@@ -6,7 +6,7 @@ var updateGridData = function (eventData, gridData) {
         _.each(matches, function(match) {
             if(_.has(entry, "quantity")) match.quantity = entry.quantity;
             if(_.has(entry, "price")) match.price = entry.price;
-            if(_.has(entry, "prediction")) match.prediction = entry.prediction;
+            if(_.has(entry, "deltaPrediction")) match.deltaPrediction = entry.deltaPrediction;
             if(_.has(entry, "holding")) match.holding = entry.holding;
             if(_.has(entry, "sentiment")) match.sentiment = entry.sentiment;
         });

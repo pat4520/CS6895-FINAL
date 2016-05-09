@@ -30,7 +30,7 @@ angular.module("app")
                                   { field: 'product' },
                                   { field: 'quantity', cellClass: 'cell-blue' },
                                   { field: 'price', cellClass: 'cell-blue' },
-                                  { field: 'prediction', cellClass: 'cell-blue' },
+                                  { field: 'deltaPrediction', cellClass: 'cell-blue' },
                                   { field: 'holding', cellClass: 'cell-green' },
                                   { field: 'sentiment', cellClass: 'cell-green' }];
     $scope.gridData.enableFiltering = true;
@@ -80,25 +80,69 @@ angular.module("app")
 }).controller('AssetsCtrl', function($scope) {
   Highcharts.chart('container', {
     chart: {
-        type: 'bar'
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
     },
     title: {
-        text: 'Product by Account'
+        text: 'Portfolio Allocation'
     },
-    xAxis: {
-        categories: ['XYZ Personal Account', 'Science Center', 'A1 Pension Fund']
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
     },
-    yAxis: {
-        title: {
-            text: 'Product Holdings'
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
         }
     },
     series: [{
-        name: 'Microsoft',
-        data: [50, 100, 100]
-    }, {
-        name: 'Berkshire Hathaway',
-        data: [0, 170, 100]
+        name: 'Brands',
+        colorByPoint: true,
+        data: [{
+            name: 'Alcoa Inc',
+            y: 473
+        }, {
+            name: 'Amazon',
+            y: 33987.5
+        }, {
+            name: 'Berkshire Hathaway',
+            y: 38585.7
+        }, {
+            name: 'Cablevision Systems',
+            y: 13840
+        }, {
+            name: 'Goldman Sachs',
+            y: 78755
+        }, {
+            name: 'IBM',
+            y: 14734
+        }, {
+            name: 'Coca Cola',
+            y: 23751
+        }, {
+            name: 'Microsoft',
+            y: 12517.5,
+            sliced: true,
+            selected: true
+        }, {
+            name: 'QUALCOMM Inc',
+            y: 2560
+        }, {
+            name: 'Starbucks',
+            y: 2832
+        }, {
+            name: 'Visa',
+            y: 3911
+        }]
     }]
   })
 });
