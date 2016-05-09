@@ -42,17 +42,17 @@ object Cache {
   )
 
   val preditions = mutable.Map(
-    "MSFT" -> 0.0,
-    "BRK-B" -> 0.0,
-    "CVC" -> 0.0,
-    "KO" -> 0.0,
-    "GS" -> 0.0,
-    "IBM" -> 0.0,
-    "AA" -> 0.0,
-    "AMZN" -> 0.0,
-    "V" -> 0.0,
-    "SBUX" -> 0.0,
-    "QCOM" -> 0.0
+    "MSFT" -> 0.75,
+    "BRK-B" -> 0.75,
+    "CVC" -> 0.75,
+    "KO" -> 0.75,
+    "GS" -> 0.75,
+    "IBM" -> 0.75,
+    "AA" -> 0.75,
+    "AMZN" -> 0.75,
+    "V" -> 0.75,
+    "SBUX" -> 0.75,
+    "QCOM" -> 0.75
   )
 
   val sectors = Map(

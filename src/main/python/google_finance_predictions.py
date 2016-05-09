@@ -72,5 +72,5 @@ while True:
 
     publish_market_predictions({"Predictions": predictions})
 
-    time.sleep(60)  # Delay for 10 seconds
+    time.sleep(10)  # Delay for 10 seconds
 

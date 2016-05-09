@@ -95,6 +95,7 @@ object HoldingCalculator {
               "product" -> products(key.productId),
               "quantity" -> holding.quantity,
               "price" -> Cache.prices(key.productId),
+              "prediction" -> Cache.preditions(key.productId),
               "holding" -> holding.price,
               "sentiment" -> Cache.sentiments(key.productId)
             )))

@@ -30,6 +30,7 @@ angular.module("app")
                                   { field: 'product' },
                                   { field: 'quantity', cellClass: 'cell-blue' },
                                   { field: 'price', cellClass: 'cell-blue' },
+                                  { field: 'prediction', cellClass: 'cell-blue' },
                                   { field: 'holding', cellClass: 'cell-green' },
                                   { field: 'sentiment', cellClass: 'cell-green' }];
     $scope.gridData.enableFiltering = true;
